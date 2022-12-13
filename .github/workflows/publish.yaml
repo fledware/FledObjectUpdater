@@ -1,0 +1,27 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
+      - name: Publish package
+        env:
+          ORG_GRADLE_PROJECT_ossrhUsername: ${{ secrets.OSSRHUSERNAME }}
+          ORG_GRADLE_PROJECT_ossrhPassword: ${{ secrets.OSSRHPASSWORD }}
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.SIGNINGKEY }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNINGPASS }}
+        run: ./gradlew publish
