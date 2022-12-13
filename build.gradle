@@ -95,12 +95,12 @@ publishing {
       from components.kotlin
       artifact sourcesJar
       artifact javadocJar
-      artifactId = "fledutils"
+      artifactId = "fledobjectupdater"
       pom {
         name = project.name
         packaging = "jar"
         description = "A set of utilities common for the fledware code"
-        url = "https://github.com/fledware/FledUtils/"
+        url = "https://github.com/fledware/FledObjectUpdater/"
         licenses {
           license {
             name = 'The Apache License, Version 2.0'
@@ -108,9 +108,9 @@ publishing {
           }
         }
         scm {
-          connection = "scm:git:git@github.com:fledware/fledutils.git"
-          developerConnection = "scm:git:git@github.com:fledware/fledutils.git"
-          url = "https://github.com/fledware/FledUtils/"
+          connection = "scm:git:git@github.com:fledware/fledobjectupdater.git"
+          developerConnection = "scm:git:git@github.com:fledware/fledobjectupdater.git"
+          url = "https://github.com/fledware/FledObjectUpdater/"
         }
         developers {
           developer {
