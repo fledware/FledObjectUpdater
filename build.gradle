@@ -1,7 +1,7 @@
 buildscript {
   ext {
     kotlinVersion="1.7.22"
-    junitVersion="5.9.1"
+    junitVersion="5.9.2"
     slf4jVersion="2.0.5"
     log4jVersion="2.19.0"
     jacksonVersion="2.14.1"
