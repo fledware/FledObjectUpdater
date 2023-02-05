@@ -1,10 +1,10 @@
 buildscript {
   ext {
-    kotlinVersion="1.7.22"
-    junitVersion="5.9.1"
-    slf4jVersion="2.0.5"
+    kotlinVersion="1.8.10"
+    junitVersion="5.9.2"
+    slf4jVersion="2.0.6"
     log4jVersion="2.19.0"
-    jacksonVersion="2.14.1"
+    jacksonVersion="2.14.2"
   }
 
   repositories {
@@ -36,7 +36,6 @@ dependencies {
   implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
   implementation "org.slf4j:slf4j-api:$slf4jVersion"
   api("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion") {
-    exclude module: "org.jetbrains.kotlin", group: "kotlin-reflect"
     exclude group: "org.jetbrains.kotlin", module: "kotlin-reflect"
   }
 
