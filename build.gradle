@@ -4,7 +4,7 @@ buildscript {
     junitVersion="5.9.2"
     slf4jVersion="2.0.7"
     log4jVersion="2.20.0"
-    jacksonVersion="2.14.2"
+    jacksonVersion="2.15.1"
   }
 
   repositories {
